@@ -74,7 +74,7 @@ class Solution:
             leftMax = helper(node.left)
             self.max = max(self.max, rightMax + node.val + leftMax)
             return max(node.val + max(leftMax, rightMax), 0)
-        self.max = None
+        self.max = float('-inf')
         _ = helper(root)
         return self.max
 
